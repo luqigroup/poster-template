@@ -1,0 +1,88 @@
+\documentclass[landscape,paperwidth=72in,paperheight=48in,fontscale=0.14,margin=2.5cm]{baposter} % 6ft wide x 4ft high, sized for a 4'h x 6'w board. fontscale=0.14 -> ~2" title, ~1" body, legible from 10-12 ft.
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{enumitem}
+
+\newcommand{\compresslist}{\setlength\itemsep{-0.2em}}
+\renewcommand{\labelitemi}{$\blacktriangleright$}
+\setlist[itemize]{leftmargin=*}
+\definecolor{UCFGold}{HTML}{FFCC00}
+
+\newcommand{\B}{\mathbf}
+
+\begin{document}
+
+\begin{poster}
+{
+columns=12,
+textborder=none,
+headerborder=none,
+headershape=smallrounded,
+colspacing=1em,
+bgColorOne=white,
+bgColorTwo=white,
+borderColor=UCFGold,
+headerColorOne=UCFGold,
+headerColorTwo=UCFGold,
+headerFontColor=black,
+boxColorOne=white,
+eyecatcher=false,
+headerheight=0.11\textheight,
+headerfont=\large\bf,
+linewidth=1pt
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\vspace*{0.4em}\bf{\huge Poster Title Goes Here}\vspace{0.3em}} % \huge ~= 2" lettering on this board
+{{Author One, Author Two, Author Three}\vspace{0.4em}}
+{{\includegraphics[height=5.5em]{luqi-with-text.png}\hspace{1em}\includegraphics[height=5.5em]{ucf-logo.png}}}
+
+% A 4'h x 6'w board uses THREE columns (span=4 each). Stack boxes with below=<name>.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Introduction}{name=intro,column=0,span=4,row=0}{
+
+Your introduction text goes here.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Methods}{name=methods,column=0,span=4,below=intro}{
+
+Your methods description goes here.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Results}{name=results,column=4,span=4,row=0}{
+
+Your results go here.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Discussion}{name=discussion,column=4,span=4,below=results}{
+
+Your discussion goes here.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Conclusion}{name=conclusion,column=8,span=4,row=0}{
+
+Your conclusion goes here.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{References}{name=references,column=8,span=4,below=conclusion}{
+
+Your references go here. Use a bibtex file.
+
+}
+
+\end{poster}
+\end{document}
